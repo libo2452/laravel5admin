@@ -19,3 +19,14 @@ if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
 }
 
 require_once __DIR__.'/public/index.php';
+
+$server->on('message', function (Hoa\Event\Bucket $bucket) {
+    $data = $bucket->getData();
+
+    echo 'message: ', $data['message'], "\n";
+    $bucket->getSource()->send($data['message']);
+
+    return;
+});
+
+$server->run();

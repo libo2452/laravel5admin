@@ -19,7 +19,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-
+Route::resource('todo', 'TodoController', ['except' => ['create', 'edit']]);//ÅÅ³ıµôcreateºÍedit²Ù×÷s
 
 
 /*
