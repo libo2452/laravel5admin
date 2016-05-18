@@ -11,6 +11,8 @@
         "infyomlabs/laravel-generator": "dev-master",
         "infyomlabs/core-templates": "dev-master",
         "laravelcollective/html": "5.2.*",
+        "infyomlabs/swagger-generator": "dev-master",
+        "jlapp/swaggervel": "dev-master",
         "doctrine/dbal": "~2.3",
         "predis/predis": "^1.0",
         "barryvdh/laravel-ide-helper": "^2.1"
@@ -24,7 +26,8 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "app/models"
         ],
         "psr-4": {
             "App\\": "app/"
