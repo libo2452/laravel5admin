@@ -8,7 +8,7 @@ use App\Http\Requests;
 
 class TodoController extends Controller {
     //
-    public function index() {
+    public function index(Request $request) {
         $uncompletedTodos = Todo::where('isCompleted' , 0)->get();
         $completedTodos = Todo::where('isCompleted' , 1)->get();
 
@@ -16,7 +16,10 @@ class TodoController extends Controller {
             'uncompletedTodos' => $uncompletedTodos ,
             'completedTodos'   => $completedTodos
         ];
-
+        if( $request->ajax() ){
+//            dd($data);
+            return view('todo.ajax' , $data);
+        }
         return view('todo.index' , $data);
     }
 
