@@ -16,7 +16,9 @@
         "doctrine/dbal": "~2.3",
         "predis/predis": "^1.0",
         "barryvdh/laravel-ide-helper": "^2.1",
-        "hoa/websocket": "^3.16"
+        "hoa/websocket": "^3.16",
+        "guzzlehttp/guzzle": "^6.2",
+        "j0k3r/php-readability": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel {
     protected $commands = [
         Commands\Inspire::class ,
         Commands\smzdmQuery::class ,
+        Commands\Crawl_toutiao::class,
     ];
 
     /**
@@ -23,6 +24,6 @@ class Kernel extends ConsoleKernel {
      * @return void
      */
     protected function schedule(Schedule $schedule) {
-         $schedule->command('smzdm:query')->everyFiveMinutes();
+         $schedule->command('smzdm:query')->everyTenMinutes();
     }
 }
